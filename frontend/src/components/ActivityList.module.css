@@ -1,0 +1,153 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-left: 4px solid #667eea;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+
+.card.done {
+  border-left-color: #38a169;
+  opacity: 0.75;
+}
+
+.card.overdue {
+  border-left-color: #e53e3e;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.2s;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.checkbox:hover {
+  border-color: #667eea;
+}
+
+.checked {
+  background: #38a169;
+  border-color: #38a169;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.done .title {
+  text-decoration: line-through;
+  color: #718096;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badgePending { background: #ebf4ff; color: #3182ce; }
+.badgeDone { background: #f0fff4; color: #38a169; }
+.badgeOverdue { background: #fff5f5; color: #e53e3e; }
+
+.date {
+  font-size: 0.82rem;
+  color: #718096;
+}
+
+.overdue .date {
+  color: #e53e3e;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.editBtn, .deleteBtn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.35rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.editBtn:hover { background: #ebf8ff; }
+.deleteBtn:hover { background: #fff5f5; }
+
+.empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #718096;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.empty p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.empty span {
+  font-size: 0.9rem;
+}

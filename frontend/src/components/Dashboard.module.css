@@ -1,0 +1,144 @@
+.layout {
+  min-height: 100vh;
+  background: #f0f4f8;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.headerContent {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoIcon {
+  font-size: 2rem;
+}
+
+.appName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.userName {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.headerRight {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.newBtn {
+  padding: 0.6rem 1.2rem;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.newBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.logoutBtn {
+  padding: 0.6rem 1rem;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.statCard:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.statActive {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, white);
+}
+
+.statCount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  color: #718096;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .headerContent {
+    flex-wrap: wrap;
+  }
+}
